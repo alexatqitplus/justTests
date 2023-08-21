@@ -25,7 +25,7 @@ namespace TestProject1
                 string path = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
                 ////  TestContext.Progress.WriteLine(Environment.CurrentDirectory);
 
-                driver = new ChromeDriver(path + @"\drivers\", options);
+                driver = new ChromeDriver(path + @"/drivers/", options);
 
             }
 
