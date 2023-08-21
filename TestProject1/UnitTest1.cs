@@ -19,13 +19,13 @@ namespace TestProject1
                 options.AddArguments("--no-sandbox");
                 options.AddArguments("--disable-dev-shm-usage");
                 options.AddArgument("--headless");
-                new DriverManager().SetUpDriver(new WebDriverManager.DriverConfigs.Impl.ChromeConfig());
-                driver = new ChromeDriver(options);
+               // new DriverManager().SetUpDriver(new WebDriverManager.DriverConfigs.Impl.ChromeConfig());
+               // driver = new ChromeDriver(options);
 
-                //string path = Directory.GetParent(Environment.CurrentDirectory).FullName;
+                string path = Directory.GetParent(Environment.CurrentDirectory).FullName;
                 ////  TestContext.Progress.WriteLine(Environment.CurrentDirectory);
 
-                //driver = new ChromeDriver(path + @"\drivers\", options);
+                driver = new ChromeDriver(path + @"\drivers\", options);
 
             }
 
