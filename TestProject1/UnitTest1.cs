@@ -1,6 +1,8 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Firefox;
 using WebDriverManager;
+using WebDriverManager.DriverConfigs.Impl;
 
 
 namespace TestProject1
@@ -14,13 +16,16 @@ namespace TestProject1
             [SetUp]
             public void Setup()
             {
+                FirefoxOptions op = new FirefoxOptions();
                 //  WebDriverManager.Chromedriver().setup();
-                ChromeOptions options = new ChromeOptions();
+               // ChromeOptions options = new ChromeOptions();
                // options.AddArguments("--no-sandbox");
                // options.AddArguments("--disable-dev-shm-usage");
-                options.AddArgument("--headless");
-               new DriverManager().SetUpDriver(new WebDriverManager.DriverConfigs.Impl.ChromeConfig());
-               driver = new ChromeDriver(options);
+               op.AddArgument("--headless");
+               // options.AddArgument("--headless");
+               new DriverManager().SetUpDriver(new FirefoxConfig());
+            //   driver = new ChromeDriver(options);
+               driver = new FirefoxDriver(op);
 
                // string path = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
                 ////  TestContext.Progress.WriteLine(Environment.CurrentDirectory);
