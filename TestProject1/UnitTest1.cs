@@ -22,7 +22,7 @@ namespace TestProject1
                // new DriverManager().SetUpDriver(new WebDriverManager.DriverConfigs.Impl.ChromeConfig());
                // driver = new ChromeDriver(options);
 
-                string path = Directory.GetParent(Environment.CurrentDirectory).FullName;
+                string path = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
                 ////  TestContext.Progress.WriteLine(Environment.CurrentDirectory);
 
                 driver = new ChromeDriver(path + @"\drivers\", options);
