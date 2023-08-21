@@ -16,8 +16,8 @@ namespace TestProject1
             {
                 //  WebDriverManager.Chromedriver().setup();
                 ChromeOptions options = new ChromeOptions();
-                options.AddArguments("--no-sandbox");
-                options.AddArguments("--disable-dev-shm-usage");
+               // options.AddArguments("--no-sandbox");
+               // options.AddArguments("--disable-dev-shm-usage");
                 options.AddArgument("--headless");
                // new DriverManager().SetUpDriver(new WebDriverManager.DriverConfigs.Impl.ChromeConfig());
                // driver = new ChromeDriver(options);
