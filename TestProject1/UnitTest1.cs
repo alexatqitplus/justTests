@@ -16,16 +16,17 @@ namespace TestProject1
             [SetUp]
             public void Setup()
             {
-                FirefoxOptions op = new FirefoxOptions();
+               // FirefoxOptions op = new FirefoxOptions();
                 //  WebDriverManager.Chromedriver().setup();
-               // ChromeOptions options = new ChromeOptions();
-               // options.AddArguments("--no-sandbox");
-               // options.AddArguments("--disable-dev-shm-usage");
-               op.AddArgument("--headless");
-               // options.AddArgument("--headless");
-               new DriverManager().SetUpDriver(new FirefoxConfig());
-            //   driver = new ChromeDriver(options);//
-               driver = new FirefoxDriver(op);
+                ChromeOptions options = new ChromeOptions();
+                options.AddArguments("--no-sandbox");
+                options.AddArguments("--disable-dev-shm-usage");
+              // op.AddArgument("--headless");
+                options.AddArgument("--headless");
+             //  new DriverManager().SetUpDriver(new FirefoxConfig());
+               new DriverManager().SetUpDriver(new ChromeConfig());
+               driver = new ChromeDriver(options);//
+              // driver = new FirefoxDriver(op);
 
                // string path = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
                 ////  TestContext.Progress.WriteLine(Environment.CurrentDirectory);
