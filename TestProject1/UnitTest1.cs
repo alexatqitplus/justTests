@@ -24,7 +24,7 @@ namespace TestProject1
                op.AddArgument("--headless");
                // options.AddArgument("--headless");
                new DriverManager().SetUpDriver(new FirefoxConfig());
-            //   driver = new ChromeDriver(options);
+            //   driver = new ChromeDriver(options);//
                driver = new FirefoxDriver(op);
 
                // string path = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
